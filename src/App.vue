@@ -12,8 +12,11 @@
 
 .page {
 	width: 100%;
-	min-height: 80vh;
+	min-height: 92vh;
 	margin-top: 8vh;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
 </style>
 

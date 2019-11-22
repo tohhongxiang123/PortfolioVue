@@ -72,7 +72,6 @@
     height: 100vh;
 		display: flex;
 		justify-content: center;
-		align-items: flex-start;
 		text-align: center;
   }
 
