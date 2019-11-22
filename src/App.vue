@@ -1,32 +1,63 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<NavigationBar />
+		<transition 
+		name="page-transitions"
+		mode="out-in">
+			<router-view/>
+		</transition>
+	</div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import 'assets/main.scss';
+
+.page {
+	width: 100%;
+	min-height: 80vh;
+	margin-top: 8vh;
 }
 
-#nav {
-  padding: 30px;
+.page-transitions-enter-active {
+	animation: coming 0.3s;
+	opacity: 0;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.page-transitions-leave-active  {
+	animation: going 0.3s;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+@keyframes going {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+}
+
+@keyframes coming {
+	from {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 </style>
+
+<script>
+import NavigationBar from '@/components/NavigationBar.vue'
+
+export default {
+	components: {
+		NavigationBar
+	}
+}
+</script>
