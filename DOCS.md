@@ -1,3 +1,10 @@
+## For deployment,
+```
+npm run build
+git add dist && git commit -m "Deploy"
+git subtree push --prefix dist origin gh-pages
+```
+
 ## scrollanimation directive
 
 v-scrollanimation adds 2 classes to every element it is bound to

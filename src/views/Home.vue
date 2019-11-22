@@ -17,7 +17,7 @@
 				</li>
 				<li>
 					<a target="_blank" rel="noopener noreferrer" href="mailto:tohhongxiang@gmail.com">
-						<img src="@/assets/images/email.svg" width="64px" height="64px" class="icon" alt="Email to me link"/>
+						<img src="@/assets/images/email.svg" width="64px" height="64px" class="icon" alt="Email Link"/>
 						<p><small class="text-muted">Gmail</small></p>
 					</a>
 				</li>
