@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<NavigationBar />
-		<FadeTranslateTransition mode="out-in" :duration=0.4>
+		<FadeTranslateTransition mode="out-in" duration="0.4s">
 			<router-view/>
 		</FadeTranslateTransition>
 	</div>

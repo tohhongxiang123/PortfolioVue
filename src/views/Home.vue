@@ -2,7 +2,7 @@
 	<div class="home page">
 		<div class="content">
 			<transition name="fadeIn" appear>
-			<img src="@/assets/images/headerImage.svg" width="300px"/>
+				<img src="@/assets/images/headerImage.svg" width="300px"/>
 			</transition>
 			<h1 class="title">
 				<strong>Toh Hong Xiang</strong>

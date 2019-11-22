@@ -7,7 +7,7 @@
                 <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/toh-hong-xiang-31551118b/">LinkedIn</a>
             </section>
 
-            <section>
+            <sectioN>
                 <h1 class="title">See more of me!</h1>
                 <ul class="link-list">
                     <li>
@@ -43,6 +43,18 @@
             opacity: 1;
             transition: all 0.2s ease;
         }
+    }
+
+    .before-intersect {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    .intersect {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.2s ease;
+        transition-delay: 0.3s;
     }
 
 

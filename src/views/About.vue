@@ -16,48 +16,54 @@
       </section>
 
       <section class="skills-section">
-        <div class="skills-container">
-          <div class="skills-title">
-            <img src="@/assets/images/front-end.svg" width="128px" height="128px"/>
-            <h1>Front-End</h1>
+        <transition appear enter-active-class="fadeIn" enter-class="before-fadeIn">
+          <div class="skills-container">
+            <div class="skills-title">
+              <img src="@/assets/images/front-end.svg" width="128px" height="128px"/>
+              <h1>Front-End</h1>
+            </div>
+            <div class="skills-list">
+              <p>HTML</p>
+              <p>CSS/SCSS</p>
+              <p>JavaScript</p>
+              <p>Bootstrap</p>
+              <p>React</p>
+              <p>Vue</p>
+            </div>
           </div>
-          <div class="skills-list">
-            <p>HTML</p>
-            <p>CSS/SCSS</p>
-            <p>JavaScript</p>
-            <p>Bootstrap</p>
-            <p>React</p>
-            <p>Vue</p>
-          </div>
-        </div>
+        </transition>
 
-        <div class="skills-container">
-          <div class="skills-title">
-            <img src="@/assets/images/back-end.svg" width="128px" height="128px"/>
-            <h1>Back-End</h1>
+        <transition appear enter-active-class="fadeIn" enter-class="before-fadeIn">
+          <div class="skills-container">
+            <div class="skills-title">
+              <img src="@/assets/images/back-end.svg" width="128px" height="128px"/>
+              <h1>Back-End</h1>
+            </div>
+            <div class="skills-list">
+              <p>Node</p>
+              <p>Express</p>
+              <p>MongoDB</p>
+              <p>PostgreSQL</p>
+              <p>Flask</p>
+            </div>
           </div>
-          <div class="skills-list">
-            <p>Node</p>
-            <p>Express</p>
-            <p>MongoDB</p>
-            <p>PostgreSQL</p>
-            <p>Flask</p>
+        </transition>
+
+        <transition appear enter-active-class="fadeIn" enter-class="before-fadeIn">
+          <div class="skills-container">
+            <div class="skills-title">
+              <img src="@/assets/images/misc.svg" width="128px" height="128px"/>
+              <h1>Miscellaneous</h1>
+            </div>
+            <div class="skills-list">
+              <p>Version Control (Git)</p>
+              <p>Photoshop/Figma</p>
+              <p>Python</p>
+              <p>Heroku</p>
+              <p>Agile (Scrum and Kanban)</p>
+            </div>
           </div>
-        </div>
-          
-        <div class="skills-container">
-          <div class="skills-title">
-            <img src="@/assets/images/misc.svg" width="128px" height="128px"/>
-            <h1>Miscellaneous</h1>
-          </div>
-          <div class="skills-list">
-            <p>Version Control (Git)</p>
-            <p>Photoshop/Figma</p>
-            <p>Python</p>
-            <p>Heroku</p>
-            <p>Agile (Scrum and Kanban)</p>
-          </div>
-        </div>
+        </transition>
       </section>
 
       <section>
@@ -99,6 +105,27 @@
     &:nth-child(2) {
       flex-flow: row-reverse;
     }
+  }
+
+  .before-fadeIn {
+    opacity: 0;
+
+    &:nth-child(2n + 1) {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    
+    &:nth-child(2) {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+  }
+
+  .fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.2s ease-out;
+    transition-delay: 0.1s;
   }
 
   @media screen and (max-width:533px) {

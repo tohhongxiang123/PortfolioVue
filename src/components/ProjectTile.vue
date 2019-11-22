@@ -1,13 +1,12 @@
 <template>
     
     <div class="project-tile">
-        <div class="transition-container">
-            <FadeTranslateTransition>
-                <div v-if="isIntersecting">
+                <div v-scrollanimation=0.8>
                     <div class="header">
                         <h1>{{ project.title }}</h1>
                         <p class="text-muted">{{ project.description }}</p>
                         <img v-if="project.thumbnail" :src="require(`@/assets/projectThumbnails/${project.thumbnail}`)" :alt="project.thumbnail" key="loadedImage"/>
+                        <img v-else src="@/assets/loading.png" alt="Loading" />
                     </div>
                     
                     <ul class="link-list">
@@ -19,8 +18,6 @@
                         </li>
                     </ul>
                 </div>
-            </FadeTranslateTransition>
-        </div>
     </div>
 </template>
 
@@ -31,6 +28,7 @@
         padding: 2em 4em;
         text-align: center;
         max-width: 700px;
+        min-height: 400px;
         border-radius: 0;
         transition: all 0.2s ease;
         display: flex;
@@ -56,35 +54,23 @@
     .transition-container {
         min-height: 300px;
     }
+
+    .before-intersect {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .intersect {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.2s ease-in;
+    }
 </style>
 
 <script>
-import FadeTranslateTransition from '@/components/FadeTranslateTransition.vue'
-
 export default {
     props: {
         project: Object
-    },
-    data() {
-        return {
-            isIntersecting: false,
-        }
-    },
-    mounted() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log("Intersect")
-                    this.isIntersecting = true;
-                    observer.unobserve(this.$el);
-                }
-            })
-        }, {threshold: 1.0})
-
-        observer.observe(this.$el);
-    },
-    components: {
-        FadeTranslateTransition
     }
 }
 </script>

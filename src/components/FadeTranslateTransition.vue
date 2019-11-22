@@ -36,28 +36,14 @@
     .fadeOut {
         animation: fadeOut;
     }
-
-    // .fadeTranslate-enter-active, .fadeTranslate-leave-active {
-    //     transition: all 0.2s ease-in-out;
-    // }
-
-    // .fadeTranslate-enter-to, .fadeTranslate-leave {
-    //     opacity: 1;
-    //     transform: translateX(0);
-    // }
-
-    // .fadeTranslate-enter, .fadeTranslate-leave-to {
-    //     opacity: 0;
-    //     transform: translateX(50px);
-    // }
 </style>
 
 <script>
 export default {
     props: {
         duration: {
-            type: Number,
-            default: 0.3
+            type: String,
+            default: '0.3s'
         }
     },
     computed: {
@@ -72,7 +58,7 @@ export default {
     },
     methods: {
         setDuration(el) {
-            el.style.animationDuration = `${this.duration}s`;
+            el.style.animationDuration = `${this.duration}`;
         },
         cleanUpDuration(el) {
             el.style.animationDuration = "";
