@@ -11,17 +11,26 @@
 			<ul class="link-list">
 				<li>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/tohhongxiang123">
-						<img src="@/assets/images/github.svg" width="64px" height="64px" class="icon"/>
+						<img src="@/assets/images/github.svg" width="64px" height="64px" class="icon" alt="Github Link"/>
+						<p><small class="text-muted">Github</small></p>
 					</a>
 				</li>
 				<li>
 					<a target="_blank" rel="noopener noreferrer" href="mailto:tohhongxiang@gmail.com">
-						<img src="@/assets/images/email.svg" width="74px" height="80px" class="icon"/>
+						<img src="@/assets/images/email.svg" width="64px" height="64px" class="icon" alt="Email to me link"/>
+						<p><small class="text-muted">Gmail</small></p>
 					</a>
 				</li>
 				<li>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/toh-hong-xiang-31551118b/">
-						<img src="@/assets/images/linkedIn.svg" width="64px" height="64px" class="icon"/>
+						<img src="@/assets/images/linkedIn.svg" width="64px" height="64px" class="icon" alt="LinkedIn Link"/>
+						<p><small class="text-muted">LinkedIn</small></p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" rel="noopener noreferrer" href="./resume.pdf">
+						<img src="@/assets/images/resume.svg" width="64px" height="64px" class="icon" alt="Resume Link"/>
+						<p><small class="text-muted">Resume</small></p>
 					</a>
 				</li>
 			</ul>
@@ -41,13 +50,12 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		// background: url("~@/assets/images/headerImage.svg") no-repeat center top;
 	}
 
 	.title > * {
 		font-family: Pacifico;
 	}
-
+	
 	.description {
 		font-size: 1.1em;
 	}
