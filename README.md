@@ -1,4 +1,4 @@
-# [Portfolio](https://tohhongxiang123.github.io/PortfolioVue/)
+# [Portfolio](https://tohhongxiang123.github.io/Portfolio/)
 
 Personal portfolio for tohhongxiang123 made in VueJS
 
