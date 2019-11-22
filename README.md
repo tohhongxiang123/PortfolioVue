@@ -1,4 +1,6 @@
-# portfolio
+# [Portfolio](https://tohhongxiang123.github.io/PortfolioVue/)
+
+Personal portfolio for tohhongxiang123 made in VueJS
 
 ## Project setup
 ```
