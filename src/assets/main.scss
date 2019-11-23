@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
     padding: 0;
+    color: #222;
 }
 
 h1, 
@@ -86,4 +87,14 @@ section {
 .title {
     font-size: 5rem;
     line-height: 1em;
+}
+
+.icon {
+    opacity: 0.8;
+    transition: all 0.2s ease;
+
+    &:hover {
+        opacity: 1;
+        transition: all 0.2s ease;
+    }
 }

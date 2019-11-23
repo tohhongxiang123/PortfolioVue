@@ -35,16 +35,6 @@
         justify-content: center;
     }
 
-    .icon {
-        opacity: 0.8;
-        transition: all 0.2s ease;
-
-        &:hover {
-            opacity: 1;
-            transition: all 0.2s ease;
-        }
-    }
-
     .before-intersect {
         opacity: 0;
         transform: translateX(50px);

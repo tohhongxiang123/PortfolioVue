@@ -4,7 +4,28 @@
       <section class="about-section">
         <h1 class="title">About Me</h1>
         <p class="text-muted description">Located in Singapore, I am a full-stack web developer who specializes in React. I am committed to high standards of web design, and I am always learning to expand my ever-growing skillset.</p>
-      
+
+        <ul class="link-list">
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/tohhongxiang123">
+              <img src="@/assets/images/github.svg" width="64px" height="64px" class="icon" alt="Github Link"/>
+              <p><small class="text-muted">Github</small></p>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:tohhongxiang@gmail.com">
+              <img src="@/assets/images/email.svg" width="64px" height="64px" class="icon" alt="Email Link"/>
+              <p><small class="text-muted">Gmail</small></p>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/toh-hong-xiang-31551118b/">
+              <img src="@/assets/images/linkedIn.svg" width="64px" height="64px" class="icon" alt="LinkedIn Link"/>
+              <p><small class="text-muted">LinkedIn</small></p>
+            </a>
+          </li>
+        </ul>
+        
         <ul class="link-list">
           <li>
             <a class="btn btn-primary" href="./resume.pdf" target="_blank" rel="noopener noreferrer">Download my Resume</a>
