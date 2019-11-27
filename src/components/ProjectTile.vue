@@ -9,12 +9,18 @@
                         <img v-else src="@/assets/loading.png" alt="Loading" />
                     </div>
                     
-                    <ul class="link-list">
+                    <!-- <ul class="link-list">
                         <li>
                             <a class="btn btn-primary" :href="project.demoLink" target="_blank" rel="noopener noreferrer">Demo</a>
                         </li>
                         <li>
                             <a :href="project.codeLink" class="btn" target="_blank" rel="noopener noreferrer">Code</a>
+                        </li>
+                    </ul> -->
+
+                    <ul class="link-list">
+                        <li v-for="(value, key, index) in project.data" :key="key">
+                            <a class="btn" :class="{'btn-primary': index === 0}" :href="value" target="_blank" rel="noopener noreferrer" :key="index">{{ key }}</a>
                         </li>
                     </ul>
                 </div>
